@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jared Ren</title>
+<meta name="description" content="Jared Ren is a UX researcher and M.S. student in Human Centered Design and Engineering at the University of Washington.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Apply saved theme before paint to avoid a flash.
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a class="nav-brand" href="#top">Jared Ren</a>
+      <div class="nav-links">
+        <a href="#ongoing">Ongoing</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="https://jaredren.github.io/portfolio/" target="_blank" rel="noopener">Portfolio&#8201;&#8599;</a>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+<main id="top">
+
+  <!-- ============ HEADER ============ -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Jared Ren</h1>
+      <p class="location">Seattle, Washington</p>
+
+      <ul class="links">
+        <li><a href="mailto:renjared@uw.edu">email</a></li>
+        <li><a href="cv.pdf" target="_blank" rel="noopener">cv</a></li>
+        <li><a href="https://github.com/jaredren">github</a></li>
+        <li><a href="https://linkedin.com/in/renjared">linkedin</a></li>
+        <li><a href="https://jaredren.github.io/portfolio/" target="_blank" rel="noopener">portfolio</a></li>
+      </ul>
+
+      <p class="updated">last updated &mdash; June '26</p>
+    </div>
+
+    <figure class="headshot">
+      <!-- Drop a square photo named headshot.jpg in this folder to replace the placeholder -->
+      <img src="headshot.jpg" alt="Photo of Jared Ren"
+           onerror="this.style.display='none';this.parentNode.classList.add('no-photo');">
+      <figcaption>photo</figcaption>
+    </figure>
+  </header>
+
+  <!-- ============ BIO ============ -->
+  <section class="bio">
+    <p>
+      Hi, I'm Jared. I'm a first-year M.S. student in
+      <strong>Human Centered Design and Engineering (HCDE)</strong> at the University of Washington,
+      working as a UX researcher. Before Seattle I studied Sociology and East Asian Studies at the
+      University of Toronto.
+    </p>
+    <p>
+      I'm curious about how people make room for new technology in the work and lives they already have.
+      Lately that's meant talking with professional artists about how they hold onto their creative voice
+      when generative AI shows up in their process, asking students when they do (and don't) let AI help
+      write a message to a professor, and watching how frontline public-sector workers fold new tools
+      into their day. I like getting close to people through interviews and participatory, community-based
+      methods, and I care a lot about being honest about what a small, situated study can and can't say.
+    </p>
+    <p>
+      I'm hoping to build a research career, whether in a university or an industry lab. When I'm not
+      doing research you'll probably find me wandering Seattle's farmers markets, and I have a real soft
+      spot for projects that hand a method back to the community that can use it. If any of this overlaps
+      with your work, I'd love to chat.
+    </p>
+  </section>
+
+  <!-- ============ ONGOING PROJECTS ============ -->
+  <section id="ongoing">
+    <h2>Ongoing work</h2>
+
+    <article class="project">
+      <img class="thumb" src="img/orcasound.svg" alt="Sound of the Salish Sea exhibit">
+      <h3>Sound of the Salish Sea: bioacoustics exhibit redesign</h3>
+      <p class="tags">UX research &middot; field study &middot; community partnership</p>
+      <p>
+        UX research apprenticeship with <strong>Orcasound</strong> and <strong>The Whale Museum</strong>
+        (Friday Harbor, San Juan Island), redesigning the "Sound of the Salish Sea" exhibit so visitors
+        can listen to orca sounds and contribute to the protection of the Southern Resident Killer Whales.
+        I run stakeholder interviews, structured field observation (AEIOU), and in-field visitor
+        intercepts, and help synthesize discovery findings ahead of an on-site research visit.
+      </p>
+      <p class="case-link"><a href="https://jaredren.github.io/portfolio/case-orcasound.html" target="_blank" rel="noopener">read the case study &#8594;</a></p>
+    </article>
+
+    <article class="project">
+      <img class="thumb" src="img/seattle-city-light.svg" alt="Civic Innovation at Seattle City Light">
+      <h3>Civic Innovation internship, Seattle City Light</h3>
+      <p class="tags">public-sector research &middot; continuous improvement</p>
+      <p>
+        Summer 2026 Civic Innovation internship at a municipal utility, looking at how frontline
+        public-sector workers fold new tools and processes into their professional practice. This work
+        sits closest to the phenomenon I want to study long term.
+      </p>
+    </article>
+
+  </section>
+
+  <!-- ============ PUBLICATIONS / WRITING ============ -->
+  <section id="publications">
+    <h2>Publications &amp; manuscripts</h2>
+
+    <article class="pub">
+      <p class="pub-title">"ChatGPT, Review This Message to My Prof": Investigating Students' Use of AI for Online Communication in Academic Settings</p>
+      <p class="venue">Poster, ACM CSCW 2026</p>
+      <p class="authors"><strong>Jared Ren</strong>, Soobin Cho</p>
+      <button class="abstract-toggle" aria-expanded="false">abstract</button>
+      <div class="abstract" hidden>
+        <p>
+          A two-phase interview study of why and how university students use AI to help write online
+          academic messages, and how they perceive its impact. Across recipients (peers, peer groups,
+          teaching teams, administrative and project support), relationships (closeness and importance),
+          and channels (social media, institutional tools, the LMS, and email), we find that AI use is
+          shaped not by any single factor but by the recipient, the relationship, the channel, and the
+          message considered together. AI use was highest for institutional and professional recipients
+          reached over email and the LMS, and lowest for peers reached over social media. We use these
+          patterns to ask where AI sits within existing models of the communication process.
+        </p>
+      </div>
+      <p class="case-link"><a href="https://jaredren.github.io/portfolio/case-cscw-poster.html" target="_blank" rel="noopener">read the case study &#8594;</a></p>
+    </article>
+
+    <article class="pub">
+      <p class="pub-title">Students' Use of AI for Academic Online Communication (extended study)</p>
+      <p class="venue">Manuscript in preparation</p>
+      <p class="authors"><strong>Jared Ren</strong>, Soobin Cho</p>
+    </article>
+
+    <article class="pub">
+      <p class="pub-title">Negotiating Generative AI: How Professional Visual Artists Maintain Creative Identity, Authorship, and Agency</p>
+      <p class="venue">Qualitative interview study &middot; manuscript in preparation</p>
+      <p class="authors"><strong>Jared Ren</strong>, Hsiang-Yun Lu, Soeun Park, Manasvi (team study, HCDE 519)</p>
+      <button class="abstract-toggle" aria-expanded="false">abstract</button>
+      <div class="abstract" hidden>
+        <p>
+          Public discourse tends to sort professional artists into those who fear generative AI and
+          those who have given in to it. Through interviews with five professional visual artists across
+          traditional painting, oil painting and performance, commercial VFX, and editorial illustration,
+          we find that this binary does not hold: across every participant, artistic identity and agency
+          remained intact, and artists acted as strategic negotiators rather than passive users or pure
+          refusers. We describe where AI enters each artist's workflow, the phases of work they keep for
+          themselves (concept, execution, and judgment), and the practices they use to defend those
+          phases. We close by distinguishing what these practices can protect (authorship) from what
+          they cannot reach on their own (ownership of work used as training data), and what that implies
+          for the tools and policies built around creative work.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <img class="thumb" src="img/farmers.png" alt="Map-your-route activity at the farmers market">
+      <h3>Mapping food-access awareness at the U District Farmers Market</h3>
+      <p class="tags">participatory design &middot; community-based research</p>
+      <p>
+        Community-based participatory design with the <strong>Neighborhood Farmers Markets</strong>.
+        With a small team I built a playful "map your route" activity and sticker probes to surface how
+        market-goers move through the market and how aware they are of food-access currency programs
+        (EBT, SNAP Market Match, Fresh Bucks). The method itself became a finding: a low-burden,
+        ecologically valid way to capture in-the-moment route and experience data that markets do not
+        currently have. We are developing it toward a conference poster and a handoff "blueprint" that
+        market staff can run themselves.
+      </p>
+      <p class="case-link"><a href="https://jaredren.github.io/portfolio/case-farmers-market.html" target="_blank" rel="noopener">read the case study &#8594;</a></p>
+    </article>
+
+    <article class="project">
+      <img class="thumb" src="img/anchor.png" alt="Anchor usability study">
+      <h3>Anchor: usability study of senior-focused puzzles</h3>
+      <p class="tags">usability testing &middot; mixed methods &middot; sponsor deliverable</p>
+      <p>
+        A four-person team usability study for Anchor, a company selling low-piece-count jigsaw puzzles
+        designed for seniors and people facing cognitive challenges. We ran a cognitive walkthrough, a
+        Nielsen heuristic review, and moderated end-to-end testing (physical box to website to purchase)
+        with seven caregiver participants, then handed the sponsor a severity- and criticality-ranked set
+        of findings and recommendations. Midway we recognized that mood and cognition were out of scope
+        for usability testing and pivoted, with our advisor, to the full customer journey.
+      </p>
+      <p class="case-link"><a href="https://jaredren.github.io/portfolio/case-anchor.html" target="_blank" rel="noopener">read the case study &#8594;</a></p>
+    </article>
+
+    <article class="project">
+      <img class="thumb" src="img/tracequal.png" alt="TraceQual decision matrix">
+      <h3>TraceQual: a disclosure scaffold for AI in qualitative analysis</h3>
+      <p class="tags">tool building &middot; research methods &middot; <a href="https://github.com/jaredren/tracequal">github</a></p>
+      <p>
+        TraceQual reads a researcher-AI chat transcript from a qualitative coding session and produces a
+        structured decision matrix: one row per analytic decision, recording what the AI proposed, what
+        the researcher did with it, and how confident that record is. It is meant for a methods appendix
+        or audit trail; it never touches the source participant data and does not code for you. The build
+        modeled the same disclosure discipline the tool enforces, committing a failed prompt revision and
+        a refused calibration verdict to the repository rather than hiding them.
+      </p>
+    </article>
+
+    <article class="project">
+      <img class="thumb" src="img/wikipedia.svg" alt="Wikipedia dispute classifier">
+      <h3>Classifying Wikipedia talk-page disputes</h3>
+      <p class="tags">directed research &middot; fine-tuning &middot; moderation tooling</p>
+      <p>
+        A directed-research prototype to help Wikipedia moderators quickly identify the main topic and
+        applicable policy for a dispute. We data-logged more than 170 talk discussions and thousands of
+        messages, hand-associated each with the relevant policy or guideline, validated the logs for
+        inter-rater agreement, and fine-tuned GPT-4o mini to predict topic and primary policy from talk
+        content. The result is a working prototype aimed at reducing the cognitive load of triage.
+      </p>
+    </article>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <h2>Professional experience</h2>
+
+    <article class="exp">
+      <div class="exp-head">
+        <h3>UX &amp; Service Design Researcher</h3>
+        <span class="exp-date">Jun 2024 &ndash; Aug 2025</span>
+      </div>
+      <p class="exp-org">Canada Revenue Agency, Government of Canada</p>
+      <p>
+        Led public-sector UX research, conducting 50+ user interviews and usability sessions to improve
+        digital services for small-business taxpayers. Drove service redesigns that increased traffic by
+        25% and task-success rate by 66%, and ran tree-testing studies that informed navigation for more
+        than 10,000 small-business users.
+      </p>
+    </article>
+  </section>
+
+</main>
+
+<script>
+  // Dark-mode toggle, persisted in localStorage.
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    function current() {
+      return root.getAttribute('data-theme') || 'light';
+    }
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+
+  // Expand and collapse abstracts.
+  document.querySelectorAll('.abstract-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.nextElementSibling;
+      var open = panel.hasAttribute('hidden');
+      if (open) { panel.removeAttribute('hidden'); } else { panel.setAttribute('hidden', ''); }
+      btn.setAttribute('aria-expanded', String(open));
+      btn.classList.toggle('open', open);
+    });
+  });
+</script>
+</body>
+</html>

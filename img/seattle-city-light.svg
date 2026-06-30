@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Seattle City Light placeholder">
+  <rect width="800" height="500" fill="#1d2a3a"/>
+  <g stroke="#f2c14e" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M120 380 L120 150 M90 150 L150 150 M100 170 L140 170 M105 150 L120 120 L135 150"/>
+    <path d="M400 400 L400 110 M360 110 L440 110 M372 135 L428 135 M385 110 L400 80 L415 110"/>
+    <path d="M680 380 L680 150 M650 150 L710 150 M660 170 L700 170 M665 150 L680 120 L695 150"/>
+    <path d="M120 175 Q 260 230 400 130" opacity="0.7"/>
+    <path d="M400 130 Q 540 230 680 175" opacity="0.7"/>
+    <path d="M120 195 Q 260 260 400 155" opacity="0.45"/>
+    <path d="M400 155 Q 540 260 680 195" opacity="0.45"/>
+  </g>
+  <text x="400" y="455" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" fill="#f2c14e" letter-spacing="2">CIVIC INNOVATION</text>
+</svg>
