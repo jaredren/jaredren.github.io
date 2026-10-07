@@ -23,13 +23,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>
   (function () {
     try {
       var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      if (t !== 'dark' && t !== 'light') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
     } catch (e) {}
   })();
 </script>
@@ -40,13 +41,12 @@
     <div class="topnav-inner">
       <a class="nav-brand" href="./">Jared Ren</a>
       <div class="nav-links">
+        <a href="./" aria-current="page">Home</a>
         <a href="projects.html">Other projects</a>
         <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
         <a href="https://jaredren.github.io/portfolio/">Portfolio&#8201;&#8599;</a>
       </div>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
-        <span class="theme-icon" aria-hidden="true"></span>
-      </button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
     </div>
   </nav>
 
@@ -103,12 +103,13 @@
         <span class="key">[p.2]</span><span class="pub-title">&ldquo;ChatGPT, Review This Message to My Prof&rdquo;: Investigating Students&rsquo; Use of AI for Online Communication in Academic Settings</span><br>
         <span class="authors"><strong>Jared Ren</strong> and Soobin Cho</span><br>
         <span class="venue"><em>CSCW Companion &rsquo;26</em>, Salt Lake City, UT, October 2026.</span>
-        <span class="pub-links"><a href="https://doi.org/10.1145/3785651.3831512">DOI</a> &middot; <a href="https://jaredren.github.io/portfolio/case-cscw-poster.html">case study</a></span>
+        <span class="pub-links"><a href="papers/ren2026-cscw-chatgpt-review-this-message.pdf">PDF</a> &middot; <a href="https://doi.org/10.1145/3785651.3831512">DOI</a> &middot; <a href="https://jaredren.github.io/portfolio/case-cscw-poster.html">case study</a></span>
       </li>
       <li id="p1">
         <span class="key">[p.1]</span><span class="pub-title">&ldquo;I Can Talk to AI, but the Making Is Mine&rdquo;: Professional Artists&rsquo; Use of Generative Agents for Creative Work</span><br>
         <span class="authors"><strong>Jared Ren</strong>, Manasvi Kale, Hsiang-Yi Lung, and So Eun Choi</span><br>
         <span class="venue"><em>HAI &rsquo;26</em>, Osaka, Japan, November 2026. To appear.</span>
+        <span class="pub-links"><a href="papers/ren2026-hai-making-is-mine.pdf">PDF</a></span>
       </li>
     </ul>
 
@@ -118,7 +119,7 @@
         <span class="key">[n.2]</span><span class="pub-title">Delegating Before Learning: Where Generative AI Sits in Students&rsquo; Professional Communication</span><br>
         <span class="authors"><strong>Jared Ren</strong> and Soobin Cho</span><br>
         <span class="venue">CSCW 2026 workshop <em>Broader Impacts of GenAI in Communication</em>.</span>
-        <span class="pub-links"><a href="https://arxiv.org/abs/2608.28837">arXiv:2608.28837</a></span>
+        <span class="pub-links"><a href="papers/ren2026-delegating-before-learning.pdf">PDF</a> &middot; <a href="https://arxiv.org/abs/2608.28837">arXiv:2608.28837</a></span>
       </li>
       <li id="n1">
         <span class="key">[n.1]</span><span class="pub-title">An Account of Contribution Dissolution in a Research Team</span><br>
@@ -131,7 +132,7 @@
     <ul class="pubs">
       <li id="m2">
         <span class="key">[m.2]</span><span class="pub-title">Understanding Interns&rsquo; Experience of AI-Use Uncertainty and Its Effects on Well-being</span><br>
-        <span class="authors"><strong>Jared Ren</strong>, Alex [Surname], and Colin LeFevre</span><br>
+        <span class="authors"><strong>Jared Ren</strong>, Alex Foster, and Colin LeFevre</span><br>
         <span class="venue">Poster paper in preparation for <em>CHI 2027</em>.</span>
       </li>
       <li id="m1">
@@ -146,7 +147,7 @@
     <h2 id="contact-h">Contact</h2>
     <p class="misc">
       renjared [at] uw [dot] edu &middot; Seattle, WA.
-      I am applying to PhD programs in HCI, information, and communication for Fall 2028 and am
+      I am applying to PhD programs in HCI, information, and communication for Fall 2027 or Fall 2028 and am
       glad to talk about overlapping work.
     </p>
   </section>
@@ -161,12 +162,18 @@
   (function () {
     var root = document.documentElement;
     var btn = document.getElementById('theme-toggle');
-    function current() { return root.getAttribute('data-theme') || 'light'; }
+    function sync() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      btn.textContent = dark ? 'Light mode' : 'Dark mode';
+      btn.setAttribute('aria-pressed', String(dark));
+    }
     btn.addEventListener('click', function () {
-      var next = current() === 'dark' ? 'light' : 'dark';
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
+      sync();
     });
+    sync();
   })();
 </script>
 </body>

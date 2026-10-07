@@ -12,13 +12,14 @@
 <meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>
   (function () {
     try {
       var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      if (t !== 'dark' && t !== 'light') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
     } catch (e) {}
   })();
 </script>
@@ -29,13 +30,12 @@
     <div class="topnav-inner">
       <a class="nav-brand" href="./">Jared Ren</a>
       <div class="nav-links">
+        <a href="./">Home</a>
         <a href="projects.html" aria-current="page">Other projects</a>
         <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
         <a href="https://jaredren.github.io/portfolio/">Portfolio&#8201;&#8599;</a>
       </div>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
-        <span class="theme-icon" aria-hidden="true"></span>
-      </button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
     </div>
   </nav>
 
@@ -114,12 +114,18 @@
   (function () {
     var root = document.documentElement;
     var btn = document.getElementById('theme-toggle');
-    function current() { return root.getAttribute('data-theme') || 'light'; }
+    function sync() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      btn.textContent = dark ? 'Light mode' : 'Dark mode';
+      btn.setAttribute('aria-pressed', String(dark));
+    }
     btn.addEventListener('click', function () {
-      var next = current() === 'dark' ? 'light' : 'dark';
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
+      sync();
     });
+    sync();
   })();
 </script>
 </body>
