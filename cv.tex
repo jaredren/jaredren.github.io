@@ -1,0 +1,442 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{needspace}
+\usepackage{array}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex, pdfnewwindow=true, colorlinks=false, linkbordercolor={0 1 1}, urlbordercolor={0 1 1}]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage[T1]{fontenc}
+\usepackage[normalem]{ulem}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item[]\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeBulletItem}[1]{
+  \item[\scriptsize$\bullet$] {\small{
+    {#1 \vspace{-10pt}}
+  }
+  }
+}
+
+\newcommand{\resumeBulletItemPub}[2]{
+  \item [#1] {\small{
+    {#2 \vspace{-2pt}}
+  }
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item [] {
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+    }
+}
+
+\newcommand{\resumeSubheadingCustom}[6]{
+  \vspace{-1pt}\item []{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+      {\small#5} & {\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+    }
+}
+
+\newcommand{\resumeSubheadingCustomSelected}[4]{
+  \vspace{-1pt}\item []{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {\small#1} & {\small #2} \\
+      {\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+    }
+}
+
+\newcommand{\resumeSubheadingCustomTwo}[8]{
+  \vspace{-1pt}\item[] {
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+      {\small#5} & {\small #6} \\
+      {\small#7} & {\small #8} \\
+    \end{tabular*}\vspace{-5pt}
+    }
+}
+
+\newcommand{\resumeSubheadingCustomThree}[3]{
+  \vspace{0.08cm}\item[] {
+    \begin{tabular*}{0.97\textwidth}{p{0.78\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{#1}, {\small#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}
+  }
+}
+
+\newcommand{\resumeProject}[4]{
+  \vspace{0.08cm}\item[] {
+    \begin{tabular*}{0.97\textwidth}{>{\raggedright\arraybackslash}p{0.80\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #4} \\
+      {\small\textit{#2}} & \\
+      \multicolumn{2}{>{\raggedright\arraybackslash}p{0.97\textwidth}}{\small #3} \\
+    \end{tabular*}\vspace{-5pt}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \huge\bfseries{\textsc{Jared Ren}} & {\Letter\ \href{mailto:renjared@uw.edu}{\uline{renjared@uw.edu}}}\\
+    {} & {\Mundus\ \href{https://jaredren.github.io/portfolio}{\uline{jaredren.github.io/portfolio}}}\\
+\end{tabular*}
+
+\vspace{-0.5cm}
+
+%%%%%%%%%%%%INTERESTS%%%%%%%%%%%%
+\section{Focus Areas}
+\resumeSubHeadingListStart
+    \resumeBulletItem{Computer-Supported Cooperative Work (CSCW), Computer-Mediated Communication (CMC)}
+    \resumeBulletItem{AI-Mediated Communication, Human-AI Interaction, Future of Work}
+\resumeSubHeadingListEnd
+\vspace{-0.25cm}
+
+%%%%%%%%%%%%EDUCATION%%%%%%%%%%%%
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingCustom
+        {University of Washington}{Seattle, WA, USA}
+        {M.S. in Human Centered Design \& Engineering (HCI)}{Sep 2025 - Jun 2027 (expected)}
+        {GPA: 4.00 / 4.00}
+        {}
+    \resumeSubheadingCustomTwo
+        {University of Toronto}{Toronto, Canada}
+        {Honours B.A. with High Distinction, Sociology and East Asian Studies}{Sep 2019 - Jun 2024}
+        {Capstone: \emph{Voice of the Customer} for Pune Municipal Corporation, India}{Sep 2023 - Apr 2024}
+        {Exchange: University of Tokyo}{Jan 2022 - Jun 2022}
+  \resumeSubHeadingListEnd
+
+%%%%%%%%%%%%PROJECTS%%%%%%%%%%%%
+\Needspace{6\baselineskip}
+\section{Research Projects}
+\resumeSubHeadingListStart
+
+\resumeProject
+{Examining Students' Use of LLMs for Interpersonal Communication in Academic Settings}
+{Lead Researcher, University of Washington}
+{Designed and led an IRB-approved two-phase interview study (12 participants, digital-whiteboard elicitation, 110 recipient-channel groups consolidated into 31 contexts) on why and how students hand academic messages to AI; extending to n = 17 for a full manuscript. [\hyperref[P2]{\uline{p.2}}, \hyperref[N2]{\uline{n.2}}, \hyperref[M1]{\uline{m.1}}]}
+{Jan 2026 - present}
+
+\resumeProject
+{Understanding Interns' Experience of AI Uncertainty and Its Effects on Mental Well-being}
+{Lead Researcher, University of Washington}
+{Critical incident technique study of how interns decide whether to delegate work to AI and whether to disclose it; team paper targeting CHI 2027 Posters. (in progress)}
+{Sep 2026 - present}
+
+\resumeProject
+{Investigating Professional Visual Artists' Use of Generative Agents for Creative Work}
+{Lead Researcher, University of Washington}
+{Led a 4-person team through an interview study with 5 professional artists on creative identity, authorship, and agency as generative AI enters their workflow; built a 68-code codebook in ATLAS.ti and framed the contribution distinguishing proactive, principle-based limits from reactive, quality-based fixes. [\hyperref[P1]{\uline{p.1}}]}
+{Jan 2026 - Apr 2026}
+
+\resumeProject
+{TraceQual: An AI-Disclosure Tool for Qualitative Analysis}
+{Independent Project, University of Washington}
+{Built a Python tool on the Anthropic Messages API that reads a researcher-AI transcript and produces a structured decision matrix of analytic choices for a methods appendix; versioned schema, rule-derived confidence model, four-state validation harness, Streamlit deployment path. \href{https://github.com/jaredren/tracequal}{\uline{github.com/jaredren/tracequal}}}
+{Apr 2026 - Jun 2026}
+
+\resumeProject
+{Building an LLM-Powered Dispute-Classification Tool for Wikipedia Moderators}
+{Directed Research Group, University of Washington}
+{Parsed and hand-labeled 170+ talk-page discussions to the relevant Wikipedia policy, essay, or guideline; validated inter-rater agreement and fine-tuned a GPT-4.1 mini model in Python; delivered a working prototype for moderator testing.}
+{Jan 2026 - Apr 2026}
+
+\resumeProject
+{Participatory Mapping of Food-Access Program Awareness at Neighborhood Farmers Markets}
+{Research Volunteer (supervisor: Dr. Elin Bj\"orling), University of Washington}
+{Co-designed a ``map your route'' activity and sticker cultural probes to surface market-goers' awareness of EBT, SNAP Market Match, and Fresh Bucks; collected and analyzed 26 participant worksheets; scaling the method toward a participatory-design poster and a community handoff blueprint.}
+{2026}
+
+\resumeProject
+{Usability Evaluation of Anchor for an Industry Sponsor}
+{Co-lead, 4-person team (HCDE 517), University of Washington}
+{Cognitive walkthrough, heuristic review, and a moderated end-to-end usability test with 7 participants; delivered 9 ranked issues and presented findings to the sponsor.}
+{Jan 2026 - Mar 2026}
+
+\resumeProject
+{Voice of the Customer: Amplifying Urban Voices Through City Archives}
+{Senior Capstone, International Multidisciplinary Urban Capstone Project, University of Toronto}
+{Four-discipline team designing a communication and data-visualization platform to capture community voices for Pune Municipal Corporation, India; framed requirements and design criteria, built the design matrix of alternative archive designs, and led front-end deliverables (user survey, low- and high-fidelity wireframes, prototypes, partner presentation, poster).}
+{Sep 2023 - Apr 2024}
+
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%PUBLICATIONS%%%%%%%%%%%%
+\Needspace{6\baselineskip}
+\section{Publications}
+
+\vspace{0.1cm}
+{\small{PEER-REVIEWED POSTERS AND EXTENDED ABSTRACTS}}
+\vspace{-0.3cm}
+
+\begin{itemize}
+
+\item[\text{[p.2]}] \textbf{Jared Ren} and Soobin Cho. 2026. ``ChatGPT, Review This Message to My Prof'' Investigating Students' Use of AI for Online Communication in Academic Settings. In \emph{Companion Publication of the 2026 Conference on Computer-Supported Cooperative Work and Social Computing (\textbf{CSCW} Companion '26), October 10--14, 2026, Salt Lake City, UT, USA.} ACM, New York, NY, USA, 4 pages. \href{https://doi.org/10.1145/3785651.3831512}{\uline{https://doi.org/10.1145/3785651.3831512}}\label{P2}
+\vspace{-0.2cm}
+
+\item[\text{[p.1]}] \textbf{Jared Ren}, Manasvi Kale, Hsiang-Yi Lung, and So Eun Choi. 2026. ``I Can Talk to AI, but the Making Is Mine'' Professional Artists' Use of Generative Agents for Creative Work. In \emph{14th International Conference on Human-Agent Interaction (\textbf{HAI} '26), November 16--19, 2026, Osaka, Japan.} ACM, New York, NY, USA. (to appear)\label{P1}
+
+\end{itemize}
+
+\vspace{-0.1cm}
+{\small{NON-PEER-REVIEWED PUBLICATIONS}}
+\vspace{-0.3cm}
+
+\begin{itemize}
+
+\item[\text{[n.2]}] \textbf{Jared Ren} and Soobin Cho. 2026. Delegating Before Learning: Where Generative AI Sits in Students' Professional Communication. \href{https://arxiv.org/abs/2608.28837}{\uline{arXiv:2608.28837}} [cs.HC] (accepted at the 2026 \textbf{CSCW workshop} \emph{`Broader Impacts of GenAI in Communication'})\label{N2}
+\vspace{-0.2cm}
+
+\item[\text{[n.1]}] \textbf{Jared Ren}. 2026. An Account of Contribution Dissolution in a Research Team. Preprint to appear [cs.HC] (accepted at the 2026 \textbf{CSCW workshop} \emph{`"Nobody Did This": Contribution, Originality, and Accountability in Agent-Mediated Collaboration'})\label{N1}
+\vspace{-0.2cm}
+
+\end{itemize}
+
+\vspace{-0.1cm}
+{\small{MANUSCRIPTS IN PREPARATION}}
+\vspace{-0.3cm}
+
+\begin{itemize}
+
+\item[\text{[m.1]}] \textbf{Jared Ren} and Soobin Cho. Full-length manuscript extending [p.2] (interview sample n = 17). Target: \emph{Proc. ACM Hum.-Comput. Interact.} (\textbf{CSCW}), submission December 2026.\label{M1}
+
+\end{itemize}
+
+%%%%%%%%%%%%WORK EXPERIENCE%%%%%%%%%%%%
+\Needspace{6\baselineskip}
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+  \item[] {
+    \begin{tabular*}{0.97\textwidth}{p{0.75\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{Seattle City Light} & Seattle, WA, USA \\
+      {\small \textit{Continuous Improvement Intern, Customer Experience Division}} & {\small Jun 2026 - Sep 2026} \\
+      {\small \textit{Publicly owned electric utility, City of Seattle}}\\
+      {\small - Owned the residential rebate process documentation and streamlining project: go-and-see interviews across four stakeholder teams, three validated iterations of swimlane and value stream maps, and an A3 with six countermeasures, each with an owner and a 30/60/90 plan; adopted as the baseline for ongoing improvements.}\\
+      {\small - Facilitated two cohorts of lean improvement training (8 staff each, 16 contact hours) for engineers, people leaders, and field workers, and coached each participant's improvement project; each cohort identified about \$50,000 in annual savings.}\\
+      {\small - Coded survey responses from 29 staff across 16 divisions into eight themes with reach metrics and Likert statistics; authored the summary report for leadership.}\\
+      {\small - Planned and ran a full-day 5S improvement event at the Skagit hydroelectric project; handed the visual standard, audit checklist, and sustain plan to the on-site owner.}\\
+    \end{tabular*}
+    }
+
+  \item[] {
+    \begin{tabular*}{0.97\textwidth}{p{0.75\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{Canada Revenue Agency, Government of Canada} & Canada \\
+      {\small \textit{Junior UX Researcher, Service Innovation and Strategy}} & {\small Jun 2024 - Aug 2025} \\
+      {\small \textit{Strategy \& Service Design Research Intern}} & {\small Jun 2023 - May 2024} \\
+      {\small - Conducted 50+ interviews, focus groups, surveys, and card sorts with small-business taxpayers on a 2-person research team; senior management built the recommendations into the next quarter's mandate.}\\
+      {\small - Co-designed, with a senior officer, a filing-responsibility decision tree used by 1,000+ business filers; validated the structure with tree testing, raising task success 66\% and reducing front-line call volume.}\\
+      {\small - Sole owner of the division's SharePoint information architecture: research, restructure, launch, and weekly upkeep as primary page manager; intranet traffic rose 25\%.}\\
+      {\small - Built, with a senior officer, a divisional KPI dashboard and process maps across business units; developed onboarding materials and organizational mapping; mentored the section's intern.}\\
+    \end{tabular*}
+    }
+
+  \item[] {
+    \begin{tabular*}{0.97\textwidth}{p{0.75\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{Orcasound $\times$ The Whale Museum} & Friday Harbor, WA, USA \\
+      {\small \textit{UX Research Intern}} & {\small Mar 2026 - Aug 2026} \\
+      {\small - Conducted discovery research for the redesign of the ``Sound of the Salish Sea'' bioacoustics exhibit, representing the nonprofit Orcasound: stakeholder interviews, structured field observation (AEIOU), and intercept interviews across two site visits.}\\
+    \end{tabular*}
+    }
+
+  \item[] {
+    \begin{tabular*}{0.97\textwidth}{p{0.75\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{Kontech Insights} & Vancouver, BC, Canada \\
+      {\small \textit{UX Research Intern}} & {\small Feb 2023 - May 2023} \\
+      {\small - [Add one or two bullets: study types run, deliverables, and clients.]}\\
+    \end{tabular*}
+    }
+
+  \item[] {
+    \begin{tabular*}{0.97\textwidth}{p{0.75\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{HomeOptions} & Remote \\
+      {\small \textit{Operations Intern, 3-person operations team}} & {\small Jun 2021 - Dec 2022} \\
+      {\small \textit{Real-estate technology startup}}\\
+      {\small - Designed a HubSpot CRM integration and built an automated lead-generation pipeline (Airtable population, form fill, contact emails); daily leads rose from about 20 to about 100.}\\
+    \end{tabular*}
+    }
+
+  \resumeSubHeadingListEnd
+
+%%%%%%%%%%%%HONORS%%%%%%%%%%%%
+\Needspace{6\baselineskip}
+\section{Honors and Awards}
+\resumeSubHeadingListStart
+    \item[] {
+    \textbf{Graduate Student Conference Presentation Award}, University of Washington\hfill{Fall 2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{HCDE BS/MS Conference Fund Travel Award}, University of Washington\hfill{Fall 2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Honours B.A. with High Distinction}, University of Toronto\hfill{Jun 2024}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Munk Student Excellence Award}, University of Toronto\hfill{}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Kakehashi Project Award}, Japan-funded cultural exchange\hfill{}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Dean's List Scholar}, University of Toronto\hfill{Winter 2023}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Language Citation in Chinese}, University of Toronto\hfill{Winter 2021}
+    }
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%PRESENTATIONS%%%%%%%%%%%%
+\Needspace{6\baselineskip}
+\section{Presentations and Talks}
+\resumeSubHeadingListStart
+    \item[] {
+    \textbf{ACM CSCW 2026 (Poster Session):} Poster and lightning talk [\hyperref[P2]{\uline{p.2}}], Salt Lake City, UT\hfill{Oct 2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{CSCW 2026 Workshop (Broader Impacts of GenAI in Communication):} Talk [\hyperref[N2]{\uline{n.2}}]\hfill{Oct 2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{CSCW 2026 Workshop (Nobody Did This):} Lightning talk [\hyperref[N1]{\uline{n.1}}]\hfill{Oct 2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{HAI 2026 (Poster Session):} Poster [\hyperref[P1]{\uline{p.1}}], Osaka, Japan\hfill{Nov 2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Capstone Field-Research Presentation:} Community-based study for Pune Municipal Corporation, Pune, India\hfill{2024}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Cultural-Exchange Presentation:} Japan exchange program, Tokyo, Japan\hfill{2022}
+    }
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%SERVICE%%%%%%%%%%%%
+\Needspace{6\baselineskip}
+\section{Volunteer and Community Service}
+\resumeSubHeadingListStart
+    \item[] {
+    \textbf{Seattle Asian American Film Festival (SAAFF):} Usher and Accessibility Volunteer\hfill{2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Seattle City Light Family Day:} Registration and Check-in Volunteer\hfill{2026}
+    }\\
+    \vspace{-0.1cm}
+
+    \item[] {
+    \textbf{Neighborhood Farmers Markets, Seattle:} Community Research Volunteer\hfill{2026}
+    }
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%SKILLS%%%%%%%%%%%%
+\Needspace{6\baselineskip}
+\section{Skills and Languages}
+ \resumeSubHeadingListStart
+   \item[]{
+     {\small\textbf{Qualitative methods}: semi-structured interviews, focus groups, thematic analysis and codebook development, contextual inquiry, field observation (AEIOU), intercept interviews, participatory and community-based design, cultural probes, card sorting, tree testing, usability testing (moderated, cognitive walkthrough, heuristic evaluation)}
+     \vspace{-0.2cm}
+     }
+
+   \item[]{
+     {\small\textbf{Quantitative and process methods}: survey design, Likert and SUS instruments, descriptive statistics, lean process mapping, value stream mapping, A3 problem solving, 5S}
+     \vspace{-0.2cm}
+     }
+
+   \item[]{
+     {\small\textbf{Programming and tools}: Python (pandas, matplotlib, Plotly), LLM APIs (Anthropic, OpenAI), LLM fine-tuning, Git/GitHub, Jupyter, ATLAS.ti, draw.io, Excel, Jira, Confluence, SharePoint, Streamlit}
+     \vspace{-0.2cm}
+     }
+
+   \item[]{
+     {\small\textbf{Languages}: English (fluent), Mandarin Chinese (intermediate), Japanese (intermediate), French (conversational)}
+     }
+ \resumeSubHeadingListEnd
+
+\end{document}
