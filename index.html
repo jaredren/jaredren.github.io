@@ -8,8 +8,7 @@
 <meta name="author" content="Jared Ren">
 <link rel="canonical" href="https://jaredren.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jared Ren">
@@ -25,14 +24,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script>
-  (function () {
-    try {
-      var t = localStorage.getItem('theme');
-      document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
-    } catch (e) {}
-  })();
-</script>
 </head>
 <body>
 
@@ -45,7 +36,6 @@
         <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
         <a href="https://jaredren.github.io/portfolio/">UX portfolio&#8201;&#8599;</a>
       </div>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
     </div>
   </nav>
 
@@ -156,23 +146,5 @@
 
 </main>
 
-<script>
-  (function () {
-    var root = document.documentElement;
-    var btn = document.getElementById('theme-toggle');
-    function sync() {
-      var dark = root.getAttribute('data-theme') === 'dark';
-      btn.textContent = dark ? 'Light mode' : 'Dark mode';
-      btn.setAttribute('aria-pressed', String(dark));
-    }
-    btn.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
-      sync();
-    });
-    sync();
-  })();
-</script>
 </body>
 </html>

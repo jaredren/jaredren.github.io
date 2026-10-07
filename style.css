@@ -10,16 +10,6 @@
   --maxw:     720px;
 }
 
-:root[data-theme="dark"] {
-  --ink:      #f2f5f8;
-  --ink-soft: #c5ccd3;
-  --muted:    #8f98a2;
-  --rule:     #2a3540;
-  --bg:       #0f1419;
-  --accent:   #7fb8e8;
-  --accent-bg:#172330;
-}
-
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 
@@ -51,17 +41,6 @@ a:hover { text-decoration-thickness: 2px; }
 .nav-links a { color: var(--ink-soft); text-decoration: none; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--ink); text-decoration: underline; }
 
-.theme-toggle {
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--ink-soft);
-  font: inherit;
-  font-size: .85rem;
-  padding: .1rem .55rem;
-  cursor: pointer;
-}
-.theme-toggle:hover { color: var(--ink); border-color: var(--ink-soft); }
 
 /* ---------- Layout ---------- */
 main { max-width: var(--maxw); margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
