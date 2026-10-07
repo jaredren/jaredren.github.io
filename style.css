@@ -1,21 +1,23 @@
 :root {
-  --ink:      #1c1b18;
-  --ink-soft: #55524c;
-  --muted:    #7a776f;
-  --rule:     #e4e1d9;
-  --bg:       #fbfaf7;
-  --accent:   #6b3f2b;
+  --ink:      #111111;
+  --ink-soft: #444444;
+  --muted:    #6f6f6f;
+  --rule:     #dde6ef;
+  --bg:       #ffffff;
+  --accent:   #1f6fb2;
+  --accent-bg:#eaf3fb;
   --font:     'EB Garamond', Georgia, 'Times New Roman', serif;
   --maxw:     720px;
 }
 
 :root[data-theme="dark"] {
-  --ink:      #ece9e2;
-  --ink-soft: #c3bfb5;
-  --muted:    #949088;
-  --rule:     #322f2a;
-  --bg:       #16150f;
-  --accent:   #cd9b6f;
+  --ink:      #f2f5f8;
+  --ink-soft: #c5ccd3;
+  --muted:    #8f98a2;
+  --rule:     #2a3540;
+  --bg:       #0f1419;
+  --accent:   #7fb8e8;
+  --accent-bg:#172330;
 }
 
 * { box-sizing: border-box; }
@@ -35,7 +37,7 @@ a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px
 a:hover { text-decoration-thickness: 2px; }
 
 /* ---------- Nav ---------- */
-.topnav { border-bottom: 1px solid var(--rule); }
+.topnav { border-bottom: 1px solid var(--rule); background: var(--accent-bg); }
 .topnav-inner {
   max-width: var(--maxw);
   margin: 0 auto;
