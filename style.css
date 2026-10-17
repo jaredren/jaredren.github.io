@@ -85,6 +85,7 @@ ul.pubs li > * { text-indent: 0; }
 ul.pubs .key { display: inline-block; width: 3.1rem; color: var(--muted); }
 ul.pubs .pub-title { font-weight: 700; }
 ul.pubs .authors { color: var(--ink-soft); }
+ul.pubs .authors .me { text-decoration: underline; text-underline-offset: 0.15em; }
 ul.pubs .venue { color: var(--ink-soft); }
 ul.pubs .pub-links { margin-left: .4rem; }
 
